@@ -6,6 +6,7 @@
             ""EN-US"": ""English"",
             ""PT-BR"": ""Portuguese"",
             ""ES-ES"": ""Spanish"",
+            ""Welcome"": ""Welcome""
                 }";
     }
 }

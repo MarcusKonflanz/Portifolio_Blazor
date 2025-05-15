@@ -1,4 +1,6 @@
-﻿using System.Globalization;
+﻿using Portifolio_Blazor.Language.Labels;
+using Portifolio_Blazor.Language.Messages;
+using System.Globalization;
 using System.Text.Json;
 
 namespace Portifolio_Blazor.Services.Language

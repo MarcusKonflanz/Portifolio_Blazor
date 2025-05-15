@@ -1,16 +1,56 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+<MudThemeProvider />
+<MudSnackbarProvider />
+<MudDialogProvider />
+
+<style>
+    /* Active Navbar List */
+    .nav-list.active .heading2 {
+        color: #2E2E2E;
+        font-size: 20px;
+    }
+</style>
+
+@* NavBar *@
+<div class="navbar-top">
+    <div class="heading1 text-medium-black">Marcus Konflanz</div>
+    <div class="link">
+        <div class="nav-list @GetActive("/", NavLinkMatch.All)">
+            <NavLink class="text-dark-gray heading2" style="text-decoration: none;" href="/">@languageContainer.GetLabels("Welcome")</NavLink>
         </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+        <div class="nav-list @GetActive("/about", NavLinkMatch.All)">
+            <NavLink class="text-dark-gray heading2" style="text-decoration: none;" href="creation">@languageContainer.GetLabels("About")</NavLink>
+        </div>
+        <div class="nav-list @GetActive("/history", NavLinkMatch.All)">
+            <NavLink class="text-dark-gray heading2" style="text-decoration: none;" href="history">@languageContainer.GetLabels("History")</NavLink>
+        </div>
+        <div class="nav-list @GetActive("/futher", NavLinkMatch.All)">
+            <NavLink class="text-dark-gray heading2" style="text-decoration: none;" href="further">@languageContainer.GetLabels("Futher")</NavLink>
+        </div>
+    </div>
 </div>
+
+<MudPaper Elevation="0" Height="100vh" Width="100%" Class="pt-16 ">
+    <MudContainer MaxWidth="MaxWidth.Large">
+        @Body
+    </MudContainer>
+</MudPaper>
+
+
+
+@code {
+    [Inject]
+    NavigationManager NavigationManager { get; set; }
+
+    protected override void OnInitialized() => NavigationManager.LocationChanged += (s, e) => StateHasChanged();
+
+    bool isActive(string href, NavLinkMatch navLinkMatch = NavLinkMatch.Prefix)
+    {
+        var relativePath = NavigationManager.ToBaseRelativePath(NavigationManager.Uri).ToLower();
+        return navLinkMatch == NavLinkMatch.All ? relativePath == href.ToLower() : relativePath.StartsWith(href.ToLower());
+    }
+
+    string GetActive(string href, NavLinkMatch navLinkMatch = NavLinkMatch.Prefix) => isActive(href, navLinkMatch) ? "active" : "";
+
+}

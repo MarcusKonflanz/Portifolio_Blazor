@@ -6,6 +6,11 @@
             ""EN-US"": ""Inglês"",
             ""PT-BR"": ""Português"",
             ""ES-ES"": ""Espanhol"",
-                }";
+            ""Welcome"": ""Bem vindo"",
+            ""About"": ""Sobre"",
+            ""History"": ""Historia"",
+            ""Futher"": ""O que esperar?""
+        }
+        ";
     }
 }

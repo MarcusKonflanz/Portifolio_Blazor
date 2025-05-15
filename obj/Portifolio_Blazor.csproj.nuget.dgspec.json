@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Libracom\\Blazor\\Portifolio_Blazor\\Portifolio_Blazor.csproj": {}
+    "C:\\MK_Dev\\Portifolio_Blazor\\Portifolio_Blazor.csproj": {}
   },
   "projects": {
-    "C:\\Libracom\\Blazor\\Portifolio_Blazor\\Portifolio_Blazor.csproj": {
+    "C:\\MK_Dev\\Portifolio_Blazor\\Portifolio_Blazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Libracom\\Blazor\\Portifolio_Blazor\\Portifolio_Blazor.csproj",
+        "projectUniqueName": "C:\\MK_Dev\\Portifolio_Blazor\\Portifolio_Blazor.csproj",
         "projectName": "Portifolio_Blazor",
-        "projectPath": "C:\\Libracom\\Blazor\\Portifolio_Blazor\\Portifolio_Blazor.csproj",
-        "packagesPath": "C:\\Users\\marcusk\\.nuget\\packages\\",
-        "outputPath": "C:\\Libracom\\Blazor\\Portifolio_Blazor\\obj\\",
+        "projectPath": "C:\\MK_Dev\\Portifolio_Blazor\\Portifolio_Blazor.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "C:\\MK_Dev\\Portifolio_Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marcusk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -64,14 +63,18 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.15, )",
+              "version": "[8.0.14, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.4, )",
+              "version": "[9.0.3, )",
               "autoReferenced": true
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[8.6.0, )"
             }
           },
           "imports": [
@@ -88,7 +91,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.15, 8.0.15]"
+              "version": "[8.0.14, 8.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -96,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
